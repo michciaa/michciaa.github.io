@@ -21,7 +21,7 @@ exports.sendPrompt = async (req, res, next) => {
 
         const completion = await client.chat.completions.create({
             messages: [{ role: "user", content: prompt }],
-            model: "gpt-4o",
+             model: "gpt-4o"
           // model: "gpt-3.5-turbo",
 
           });
@@ -51,8 +51,8 @@ exports.sendPrompt = async (req, res, next) => {
 
         const completion2 = await client2.chat.completions.create({
             messages: [{ role: "user", content: prompt2 }],
-           model: "gpt-4o",
-           // model: "gpt-3.5-turbo",
+            model: "gpt-4o",
+           /*  model: "gpt-3.5-turbo", */
           });
 
           const htmlContent2 = completion2.choices[0].message.content;
