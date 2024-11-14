@@ -1,0 +1,29 @@
+<%- include('./includes/head') %>
+    <div id="showInfo"></div>
+<header>
+    <h1 class="uk-text-bolder color-white title">OpenAI API Text-Article Converter</h1>
+    <h3 class="color-white">by Michał Suchoń</h3>
+</header>
+
+<main>
+    <div class="main-card">
+        <h2>Error 401</h2>
+        <h4 class="uk-text-center">Wystąpił błąd podczas przetwarzania pliku. Spróbuj jeszcze raz</h4>
+        <br>
+        <code><%- error %></code>
+        <br>
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" style="width: 100%; word-wrap: break-word; word-break: break-word;">
+            <div class="uk-card-badge uk-label">LOG</div>
+            <h3 class="uk-card-title">Komunikat błędu</h3>
+            <%= errorInfo %>
+        </div>
+        <br>
+        <a href="/"><button value="1" class="uk-button uk-button-secondaru">Powrót</button></a>
+        </div>
+    </div>
+
+</main>
+<%- include('./includes/footer') %>
+
+
+    

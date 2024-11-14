@@ -1,0 +1,24 @@
+{
+  "name": "openaiarticles",
+  "version": "1.0.0",
+  "description": "Aplikacja przekazująca do API OpenAI plik do obróbki",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Michał Suchoń",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "flash": "^1.1.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "openai": "^4.72.0",
+    "path": "^0.12.7",
+    "uuid": "^11.0.3"
+  }
+}
