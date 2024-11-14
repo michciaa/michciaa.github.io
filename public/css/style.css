@@ -22,20 +22,34 @@ body, html
     color: #fff;
 }
 
-.uk-button:hover
+.uk-button-primary:hover
 {
     background-color: rgb(37, 37, 61) !important;   
+}
+.uk-button-secondary:hover
+{
+    background-color: rgb(51, 51, 51) !important;   
 }
 
 .uk-button
 {
     font-family: "Poppins", serif !important;
     border-radius: 1rem !important;
-    background-color: rgb(16, 16, 39) !important;
     margin: 0 auto !important;
     display: flex !important;
     justify-content: center;
 }
+
+.uk-button-primary
+{
+  background-color: rgb(16, 16, 39) !important;
+}
+
+.uk-button-secondary
+{
+  background-color: rgb(35, 35, 36) !important;
+}
+
 
 header
 {
@@ -181,9 +195,14 @@ em
 
 code
 {
-    display: flex;
-  justify-content: center;
-  margin: 1em;
+  display: flex;
+  justify-content: center !important;
+  margin: 1em auto !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: unset !important;
+  text-align: center;
+
 }
 
 footer
@@ -197,4 +216,25 @@ footer
 footer p
 {
   margin: 1em auto 0 auto !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .main-card
+  {
+    width: 90% !important;
+  }
+
+  button
+  {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  footer p
+  {
+    text-align: center !important;
+  }
+
+
 }
