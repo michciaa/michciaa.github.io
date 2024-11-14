@@ -4,7 +4,6 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const { OpenAI } = require('openai'); // Upewnij się, że OpenAIApi jest poprawnie zaimportowany
 require('dotenv').config()
 const multer = require('multer');
 
@@ -44,16 +43,16 @@ const fileFilter = (req, file, cb) => {
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    // Zapewnienie, że katalog uploads istnieje
+
     const uploadsDir = path.join(__dirname, 'uploads', 'data');
     if (!fs.existsSync(uploadsDir)) {
         fs.mkdirSync(uploadsDir);
     }
-    cb(null, uploadsDir); // Wskazanie folderu docelowego
+    cb(null, uploadsDir); 
     },
     filename: (req, file, cb) => {
-        // Ustalanie unikalnej nazwy pliku (np. z użyciem daty i rozszerzenia)
-        cb(null, Date.now() + path.extname(file.originalname)); // Używamy daty jako unikalnej nazwy
+        
+        cb(null, Date.now() + path.extname(file.originalname)); 
     }
 })
 
@@ -68,7 +67,6 @@ const mainRoutes = require('./routes/main');
 /* ----------------------- */
 
 
-/* app.use(flash()); */
 
 app.use(mainRoutes);
 

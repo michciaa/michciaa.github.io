@@ -97,11 +97,10 @@ exports.getIndex = async(req, res, next) => {
             <h2>Dodaj tekst do przetworzenia</h2>
             <div class="uk-placeholder uk-text-center">
                 <span uk-icon="icon: cloud-upload"></span>
-                <span class="uk-text-middle">Przeciągnij i upuść plik do przetworzenia lub</span>
                 <div uk-form-custom>
                     <form action="/" method="post" enctype="multipart/form-data">
                         <input type="file" name="file" id="fileToAI" accept=".txt" required>
-                    <span class="uk-link">wybierz, klikając tutaj</span>
+                        <span class="uk-link">Kliknij tutaj, aby wybrać plik</span>
                 </div>
             </div>
             
